@@ -1,6 +1,6 @@
 {
   "name": "abv-events",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "It extends EventEmitter with pattern matching",
   "engines": {
     "node": ">=6.11.3"

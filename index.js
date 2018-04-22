@@ -1,6 +1,7 @@
 /** 
  * Abvos PatternEmitter
  * This class extends EventEmitter with pattern matching
+ * https://github.com/tondy67/abv-events
  */
 "use strict";
 
@@ -42,10 +43,11 @@ class PatternEmitter extends EventEmitter
 		for (let [k,v] of this._regexes){
 			if (!(v instanceof RegExp)) continue;
 			match = v.exec(event);
-			if (match !== null){
+			if (match !== null){ 
 				return super.emit(k, match, ...args);
 			}
 		}
+		return false;
 	}
 	
 }
